@@ -13,7 +13,15 @@ function assembleDreamTeam() {
         {
             type: 'input',
             name: 'bossName',
-            message: "What is your Manager's name?"
+            message: "What is your Manager's name?",
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter their name.');
+                  return false;
+                }
+              }
         },
         {
             type: 'input',
@@ -91,7 +99,15 @@ function dreamEngineer() {
         {
             type: 'input',
             name: 'enginName',
-            message: "What is the name of the Engineer?"
+            message: "What is the name of the Engineer?",
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter their name.');
+                  return false;
+                }
+              }
         },
         {
             type: 'input',
@@ -123,7 +139,15 @@ function dreamEngineer() {
         {
             type: 'input',
             name: 'github',
-            message: 'What is their GitHub user name?'
+            message: 'What is their GitHub user name?',
+            validate: githubInput => {
+                if (githubInput) {
+                  return true;
+                } else {
+                  console.log('Please enter a school.');
+                  return false;
+                }
+              }
         }
 
     ]).then (dreamMember => {
@@ -138,7 +162,15 @@ function dreamIntern() {
         {
             type: 'input',
             name: 'internName',
-            message: "What is the name of the Intern?"
+            message: "What is the name of the Intern?",
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter their name.');
+                  return false;
+                }
+              }
         },
         {
             type: 'input',
@@ -170,7 +202,15 @@ function dreamIntern() {
         {
             type: 'input',
             name: 'school',
-            message: "What is their School's user name?"
+            message: "What is their School's user name?",
+            validate: schoolInput => {
+                if (schoolInput) {
+                  return true;
+                } else {
+                  console.log('Please enter a school.');
+                  return false;
+                }
+              }
         }
 
     ]).then (dreamMember => {
@@ -180,5 +220,10 @@ function dreamIntern() {
     })
 
 };
+
+function createTeam() {
+    
+}
+
 }
 assembleDreamTeam();
