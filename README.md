@@ -33,12 +33,12 @@ THEN that GitHub profile opens in a new tab
 WHEN I start the application
 THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
 
--
+- When application is started, you are prompted to enter Manager's info.
 
 WHEN I enter the team manager’s name, employee ID, email address, and office number
 THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
 
--
+- When Manager's info is entered, you are presented with a menu with the option to add more members. 
 
 WHEN I select the engineer option
 THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
@@ -83,9 +83,15 @@ Satisfies all of the preceding acceptance criteria plus the following:
 
 Uses the Inquirer package (Links to an external site.).
 
+- Application uses Inquirer. 
+
 Uses the Jest package (Links to an external site.) for a suite of unit tests.
 
+- Application uses Jest package. 
+
 The application must have these classes: Employee, Manager, Engineer, and Intern.
+
+- Application includes all four classes. 
 
 Repository Quality: 13%
 Repository has a unique name.
