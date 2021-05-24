@@ -1,13 +1,14 @@
 const inquirer =  require('inquirer');
 const fs = require('fs');
 const pageTemplate = require('./src/page-template.js');
+const generatedPage = './dist/DreamTeam.html'
 const path = require('path');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
-
+// Empty array created to capture user input response. 
 const dreamTeam = [];
-
+// Initial prompt to obtain manager info and start cycle through team members. 
 function assembleDreamTeam() {
     inquirer.prompt([
         {
@@ -51,23 +52,23 @@ function assembleDreamTeam() {
         },
         {
             input: 'input',
-            name: 'bossPhone',
-            message: "What is your Manager's office phone number?",
-            // validate: phoneInput => {
-            //     if (isNaN(phoneInput)) {
-            //         console.log('Please enter a valid phone number.');
-            //         return false;
-            //     } else {
-            //         return true;
-            //     }
-            // }
+            name: 'bossNumber',
+            message: "What is your Manager's office number?",
+            validate: phoneInput => {
+                if (isNaN(phoneInput)) {
+                    console.log('Please enter a valid number.');
+                    return false;
+                } else {
+                    return true;
+                }
+            }
         }
     ]).then(dreamMember => {
-        const manager = new Manager(dreamMember.bossName, dreamMember.bossId, dreamMember.bossId, dreamMember.bossPhone);
+        const manager = new Manager(dreamMember.bossName, dreamMember.bossId, dreamMember.bossId, dreamMember.bossNumber);
         dreamTeam.push(manager);
         moreDreamers();
     })
-
+    // Function to create more members. 
     function moreDreamers() {
         inquirer.prompt ([
             {
@@ -93,7 +94,7 @@ function assembleDreamTeam() {
         
     }
 
-
+// function to create engineers. 
 function dreamEngineer() {
     inquirer.prompt ([
         {
@@ -156,7 +157,7 @@ function dreamEngineer() {
         moreDreamers();
     })
 };
-
+// function to create interns. 
 function dreamIntern() {
     inquirer.prompt ([
         {
@@ -221,8 +222,17 @@ function dreamIntern() {
 
 };
 
-function createTeam() {
+function createDreamTeam() {
+    fs.writeFileSync(generatedPage, "");
+
     
+    // fs.writeFile(fileName, data, function (err) {
+    //     if (err) {
+    //         console.log(err);
+    //     } else {
+    //         console.log("Your ReadMe has been generated! Please check out the __")
+    //     }
+    // });
 }
 
 }
