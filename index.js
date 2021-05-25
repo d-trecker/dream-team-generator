@@ -6,6 +6,8 @@ const path = require('path');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
+//May use writeFile, copyFile from genereate site js. 
+// const { writeFile, copyFile } = require('./src/generate-site.js');
 // Empty array created to capture user input response. 
 const dreamTeam = [];
 // Initial prompt to obtain manager info and start cycle through team members. 
@@ -64,8 +66,9 @@ function assembleDreamTeam() {
             }
         }
     ]).then(dreamMember => {
-        const manager = new Manager(dreamMember.bossName, dreamMember.bossId, dreamMember.bossId, dreamMember.bossNumber);
+        const manager = new Manager(dreamMember.bossName, dreamMember.bossId, dreamMember.bossEmail, dreamMember.bossNumber);
         dreamTeam.push(manager);
+        console.log(dreamTeam);
         moreDreamers();
     })
     // Function to create more members. 
@@ -88,7 +91,7 @@ function assembleDreamTeam() {
             } else if (pick == "Intern") {
                 dreamIntern();
             } else if (pick == "None") {
-                createDreamTeam();
+                createDreamTeam()
             }
         })
         
@@ -154,6 +157,7 @@ function dreamEngineer() {
     ]).then (dreamMember => {
         const engineer = new Engineer (dreamMember.enginName, dreamMember.enginId, dreamMember.enginEmail, dreamMember.github);
         dreamTeam.push (engineer);
+        console.log(dreamTeam);
         moreDreamers();
     })
 };
@@ -217,23 +221,20 @@ function dreamIntern() {
     ]).then (dreamMember => {
         const intern = new Intern (dreamMember.internName, dreamMember.internId, dreamMember.internEmail, dreamMember.school);
         dreamTeam.push(intern);
+        console.log(dreamTeam);
         moreDreamers();
     })
 
 };
 
+
+
 function createDreamTeam() {
-    fs.writeFileSync(generatedPage, "");
-
-    
-    // fs.writeFile(fileName, data, function (err) {
-    //     if (err) {
-    //         console.log(err);
-    //     } else {
-    //         console.log("Your ReadMe has been generated! Please check out the __")
-    //     }
-    // });
-}
+    const context = pageTemplate(dreamTeam);
+    fs.writeFileSync(generatedPage, context);
+};
 
 }
-assembleDreamTeam();
+assembleDreamTeam()
+
+module.exports = dreamTeam;
