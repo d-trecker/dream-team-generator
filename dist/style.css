@@ -36,6 +36,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: calc(1rem * 3);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
   }
   
   .container-fluid {
