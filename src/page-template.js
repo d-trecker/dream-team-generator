@@ -16,7 +16,7 @@ const theDreamTeam = (teamRoster) => {
             <div class="card-body">
               <p class="card-header">ID: ${Employee.id} </p> 
               <p class="card-header">Email: <a href="mailto:${Employee.email}">${Employee.email}</a> </p>
-              <p class="card-header">Office Number:${Employee.officeNumber} </p>
+              <p class="card-header">Office Number: ${Employee.officeNumber} </p>
             </div>
           </div>
          `;
@@ -33,7 +33,7 @@ const theDreamTeam = (teamRoster) => {
             <div class="card-body">
               <p class="card-header">ID: ${Employee.id} </p>
               <p class="card-header">Email: <a href="mailto:${Employee.email}">${Employee.email}</a> </p>
-              <p class="card-header">GitHub:<a href="https://github.com/${Employee.github}"> ${Employee.github}</a> </p>
+              <p class="card-header">GitHub: <a href="https://github.com/${Employee.github}"> ${Employee.github}</a> </p>
             </div>
           </div>
          `;
@@ -51,7 +51,7 @@ const theDreamTeam = (teamRoster) => {
             <div class="card-body">
               <p class="card-header">ID: ${Employee.id} </p>
               <p class="card-header">Email: <a href="mailto:${Employee.email}">${Employee.email}</a> </p>
-              <p class="card-header">School:${Employee.school} </p>
+              <p class="card-header">School: ${Employee.school} </p>
             </div>
           </div>
          `;
@@ -90,11 +90,10 @@ const mainPage = (teamRoster) => {
 
   <main class="container">
 
-    <section class=" card-section">
 
     ${theDreamTeam(teamRoster)}
 
-    </section>
+
   </main>
 </body>
 

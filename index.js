@@ -44,7 +44,7 @@ function assembleDreamTeam() {
             name: 'bossEmail',
             message: "What is your Manager's email?",
             validate: emailInput => {
-                if (emailInput.includes("@")){
+                if (emailInput.includes("@" && ".com")){
                     return true;
                 }else {
                     console.log('This is not a valid email. Try again.');
@@ -56,8 +56,8 @@ function assembleDreamTeam() {
             input: 'input',
             name: 'bossNumber',
             message: "What is your Manager's office number?",
-            validate: phoneInput => {
-                if (isNaN(phoneInput)) {
+            validate: officeInput => {
+                if (isNaN(officeInput)) {
                     console.log('Please enter a valid number.');
                     return false;
                 } else {
@@ -131,7 +131,7 @@ function dreamEngineer() {
             name: 'enginEmail',
             message: 'What is their email address?',
             validate: emailInput => {
-                if (emailInput.includes("@")){
+                if (emailInput.includes("@" && ".com")){
                     return true;
                 }else {
                     console.log('This is not a valid email. Try again.');
@@ -148,7 +148,7 @@ function dreamEngineer() {
                 if (githubInput) {
                   return true;
                 } else {
-                  console.log('Please enter a school.');
+                  console.log('Please enter a GitHub user name.');
                   return false;
                 }
               }
@@ -195,7 +195,7 @@ function dreamIntern() {
             name: 'internEmail',
             message: 'What is their email address?',
             validate: emailInput => {
-                if (emailInput.includes("@")){
+                if (emailInput.includes("@" && ".com")){
                     return true;
                 }else {
                     console.log('This is not a valid email. Try again.');
