@@ -2,13 +2,9 @@ const inquirer =  require('inquirer');
 const fs = require('fs');
 const pageTemplate = require('./src/page-template.js');
 const generatedPage = './dist/DreamTeam.html'
-const path = require('path');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
-//May use writeFile, copyFile from genereate site js. 
-// const { writeFile, copyFile } = require('./src/generate-site.js');
-// Empty array created to capture user input response. 
 const dreamTeam = [];
 // Initial prompt to obtain manager info and start cycle through team members. 
 function assembleDreamTeam() {
@@ -227,14 +223,19 @@ function dreamIntern() {
 
 };
 
+function callBack(err) {
+    if (err) throw err; 
+    console.log('Your Dream Team has been created!');
+};
 
-
+//Function to write file to desired path and added copyfile to add CSS to desired path. 
 function createDreamTeam() {
     const context = pageTemplate(dreamTeam);
     fs.writeFileSync(generatedPage, context);
+    fs.copyFile('./src/style.css', './dist/style.css', callBack); 
 };
 
 }
-assembleDreamTeam()
+assembleDreamTeam();
 
 module.exports = dreamTeam;

@@ -2,7 +2,7 @@
 
 Title: Dream-Team Generator</br>
 Student: Dylan Trecker</br>
-Description: .</br>
+Description: A command-line application that generates a webpage that displays your Dream Team.</br>
 Full Repository: https://github.com/d-trecker/dream-team-generator.git</br>
 Get the repository by: git@github.com:d-trecker/dream-team-generator.git </br>
 Video Link: </br>
@@ -28,7 +28,7 @@ THEN my default email program opens and populates the TO field of the email with
 WHEN I click on the GitHub username
 THEN that GitHub profile opens in a new tab
 
--
+-When you click on GitHub username, profile opens in new tab.
 
 WHEN I start the application
 THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number

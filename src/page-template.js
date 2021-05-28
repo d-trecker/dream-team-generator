@@ -33,7 +33,7 @@ const theDreamTeam = (teamRoster) => {
             <div class="card-body">
               <p class="card-header">ID: ${Employee.id} </p>
               <p class="card-header">Email: <a href="mailto:${Employee.email}">${Employee.email}</a> </p>
-              <p class="card-header">GitHub: <a href="https://github.com/${Employee.github}"> ${Employee.github}</a> </p>
+              <p class="card-header">GitHub: <a href="https://github.com/${Employee.github}" target="_blank"> ${Employee.github}</a> </p>
             </div>
           </div>
          `;
