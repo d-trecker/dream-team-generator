@@ -64,7 +64,7 @@ const theDreamTeam = (teamRoster) => {
 
 //Function to generate main HTML. 
 const mainPage = (teamRoster) => {
-    console.log(teamRoster);
+    // console.log(teamRoster);
     return `
     <!DOCTYPE html>
 <html lang="en">

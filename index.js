@@ -64,7 +64,7 @@ function assembleDreamTeam() {
     ]).then(dreamMember => {
         const manager = new Manager(dreamMember.bossName, dreamMember.bossId, dreamMember.bossEmail, dreamMember.bossNumber);
         dreamTeam.push(manager);
-        console.log(dreamTeam);
+        // console.log(dreamTeam);
         moreDreamers();
     })
     // Function to create more members. 
@@ -153,7 +153,7 @@ function dreamEngineer() {
     ]).then (dreamMember => {
         const engineer = new Engineer (dreamMember.enginName, dreamMember.enginId, dreamMember.enginEmail, dreamMember.github);
         dreamTeam.push (engineer);
-        console.log(dreamTeam);
+        // console.log(dreamTeam);
         moreDreamers();
     })
 };
@@ -217,7 +217,7 @@ function dreamIntern() {
     ]).then (dreamMember => {
         const intern = new Intern (dreamMember.internName, dreamMember.internId, dreamMember.internEmail, dreamMember.school);
         dreamTeam.push(intern);
-        console.log(dreamTeam);
+        // console.log(dreamTeam);
         moreDreamers();
     })
 

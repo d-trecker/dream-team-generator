@@ -5,7 +5,7 @@ Student: Dylan Trecker</br>
 Description: A command-line application that generates a webpage that displays your Dream Team.</br>
 Full Repository: https://github.com/d-trecker/dream-team-generator.git</br>
 Get the repository by: git@github.com:d-trecker/dream-team-generator.git </br>
-Video Link: </br>
+Video Link: https://drive.google.com/file/d/1-BoJj0ViDL88uxDRX0wMH0R_4ObF_RXK/view?usp=sharing </br>
 
 User Story</br>
 AS A manager
