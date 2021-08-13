@@ -20,11 +20,12 @@ Video Link: https://drive.google.com/file/d/1-BoJj0ViDL88uxDRX0wMH0R_4ObF_RXK/vi
   A command-line application that generates a webpage that displays your Dream Team.
   </br>
   ## Installation
-  - `$ git clone git@github.com:d-trecker/dream-team-generator.git`
-  - From the 'Develop' directory use command `npm install`
+  - `$ git clone git@github.com:d-trecker/dream-team-generator.git`  </br>
+  - From the 'Develop' directory use command `npm install`  </br>
   </br>
   ## Usage
-  From the root directory, in the terminal type 'node index' to start prompts. fill out prompts to complete the application and have your webpage generated. 
+  - From the root directory, in the terminal type `node index` to start prompts.  </br>
+  - Fill out prompts to complete the application and have your webpage generated.  </br>
   </br>
   ## Contributions
   Dylan Trecker
@@ -34,8 +35,8 @@ Video Link: https://drive.google.com/file/d/1-BoJj0ViDL88uxDRX0wMH0R_4ObF_RXK/vi
   </br>
   ## Questions
   Have any questions? 
-  - Contact me @: dylan.j.trecker@gmail.com
-  - Or find me on GitHub at: https://github.com/d-trecker
+  - Contact me @: dylan.j.trecker@gmail.com  </br>
+  - Or find me on GitHub at: https://github.com/d-trecker  </br>
   </br>
   ## License 
     MIT
